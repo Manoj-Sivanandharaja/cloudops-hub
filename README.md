@@ -1,15 +1,9 @@
 CloudOps Hub
 A containerized task-management application built to demonstrate practical Cloud and DevOps workflows, including Docker, Docker Compose, Kubernetes, PostgreSQL, automated testing, and CI/CD.
+
 Architecture
-User / Browser
-      |
-      v
-React Frontend (served by Nginx)
-      |
-      v
-Flask REST API
-      |
-      v
+<img width="998" height="1722" alt="mermaid-diagram" src="https://github.com/user-attachments/assets/0fd37fb9-c79d-46d5-86dc-4937321e67fc" />
+
 PostgreSQL Database
 Technology Stack
 - Frontend: React, Vite, Nginx
