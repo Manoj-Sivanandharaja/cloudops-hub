@@ -16,6 +16,24 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install backend dependencies and test tools
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -r backend/requirements.txt pytest
+
+      - name: Run backend tests
+        env:
+          PYTHONPATH: backend
+          DB_NAME: test_db
+          DB_USER: test_user
+          DB_PASSWORD: test_password
+        run: python -m pytest -v tests/
+
       - name: Set up Kubeconform
         uses: bmuschko/setup-kubeconform@v1
 
