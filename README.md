@@ -7,7 +7,7 @@ A containerized task-management application built to demonstrate practical Cloud
 <img width="998" height="1722" alt="mermaid-diagram" src="https://github.com/user-attachments/assets/1e02fa9d-414b-444e-ac5e-c3c19406b8b9" />
 
 
-### Application Flow
+## Application Flow
 
 1. **Frontend:** React application served through Nginx.
 2. **Backend:** Flask REST API handles application requests.
@@ -15,6 +15,11 @@ A containerized task-management application built to demonstrate practical Cloud
 4. **Containerization:** Docker packages the application services.
 5. **Orchestration:** Docker Compose and Kubernetes manage deployment environments.
 6. **CI/CD:** GitHub Actions automates configured testing and build workflows.
+
+## Application Screenshot
+
+<img width="3200" height="1800" alt="cloudops-frontend" src="https://github.com/user-attachments/assets/5c6f5680-2ee6-4f75-b075-5b53e5e3569b" />
+
 
 ## Technology Stack
 
