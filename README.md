@@ -20,6 +20,17 @@ A containerized task-management application built to demonstrate practical Cloud
 
 <img width="3200" height="1800" alt="cloudops-frontend" src="https://github.com/user-attachments/assets/5c6f5680-2ee6-4f75-b075-5b53e5e3569b" />
 
+## Docker Compose Status
+
+The application services run using Docker Compose, including the frontend, backend API, and PostgreSQL database.
+
+<img width="1920" height="1080" alt="docker-compose-status" src="https://github.com/user-attachments/assets/a127bc79-bf75-4136-959b-ab1bf591fd31" />
+
+## Kubernetes Deployment
+
+The application is deployed on Kubernetes, with pods and services managed within the cloudops-hub namespace.
+
+<img width="1920" height="1080" alt="kubernetes-status" src="https://github.com/user-attachments/assets/e48cea6b-c322-401e-9083-e76370f97380" />
 
 ## Technology Stack
 
