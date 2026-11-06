@@ -4,7 +4,8 @@ A containerized task-management application built to demonstrate practical Cloud
 
 ## Architecture
 
-![CloudOps Hub Architecture](https://private-user-images.githubusercontent.com/203242062/697225348-0fd37fb9-c79d-46d5-86dc-4937321e67fc.png)
+<img width="998" height="1722" alt="mermaid-diagram" src="https://github.com/user-attachments/assets/1e02fa9d-414b-444e-ac5e-c3c19406b8b9" />
+
 
 ### Application Flow
 
