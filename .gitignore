@@ -1,0 +1,17 @@
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Backups
+*.bak
+
+# Frontend dependencies and build output
+node_modules/
+dist/
