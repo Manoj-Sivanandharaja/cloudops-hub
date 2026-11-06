@@ -16,18 +16,15 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Set up Docker Buildx
-        uses: docker/setup-buildx-action@v3
+      - name: Set up Kubeconform
+        uses: bmuschko/setup-kubeconform@v1
 
       - name: Validate Kubernetes manifests
         run: |
-          kubectl apply --dry-run=client \
-            --validate=false \
-            -f k8s/namespace.yaml
+          kubeconform -strict -summary k8s/namespace.yaml k8s/app.yaml
 
-          kubectl apply --dry-run=client \
-            --validate=false \
-            -f k8s/app.yaml
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
 
       - name: Build backend image
         uses: docker/build-push-action@v6
