@@ -15,3 +15,22 @@ venv/
 # Frontend dependencies and build output
 node_modules/
 dist/
+
+# Local Kubernetes credentials - do not commit
+/k8s/secret.yaml
+
+# Local secrets
+.env
+k8s/secret.yaml
+
+# Temporary backups
+*.bak
+*.backup
+
+# Python generated files
+__pycache__/
+*.py[cod]
+
+# Local virtual environments
+.venv/
+venv/
