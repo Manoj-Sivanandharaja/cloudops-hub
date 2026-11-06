@@ -1,3 +1,4 @@
+
 name: CloudOps Hub CI
 
 on:
@@ -9,7 +10,7 @@ on:
 
 jobs:
   validate-and-build:
-    name: Validate and Build
+    name: Test, Validate and Publish
     runs-on: ubuntu-latest
 
     steps:
@@ -39,21 +40,33 @@ jobs:
 
       - name: Validate Kubernetes manifests
         run: |
-          kubeconform -strict -summary k8s/namespace.yaml k8s/app.yaml
+          kubeconform -strict -summary \
+            k8s/namespace.yaml k8s/app.yaml
 
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
 
-      - name: Build backend image
+      - name: Log in to Docker Hub
+        if: github.event_name != 'pull_request'
+        uses: docker/login-action@v3
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+
+      - name: Build and publish backend image
         uses: docker/build-push-action@v6
         with:
           context: ./backend
-          push: false
-          tags: cloudops-hub-backend:ci
+          push: ${{ github.event_name != 'pull_request' }}
+          tags: |
+            manoj03092005/cloudops-hub-backend:latest
+            manoj03092005/cloudops-hub-backend:${{ github.sha }}
 
-      - name: Build frontend image
+      - name: Build and publish frontend image
         uses: docker/build-push-action@v6
         with:
           context: ./frontend
-          push: false
-          tags: cloudops-hub-frontend:ci
+          push: ${{ github.event_name != 'pull_request' }}
+          tags: |
+            manoj03092005/cloudops-hub-frontend:latest
+            manoj03092005/cloudops-hub-frontend:${{ github.sha }}
