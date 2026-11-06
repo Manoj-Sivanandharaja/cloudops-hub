@@ -1,11 +1,15 @@
-CloudOps Hub
+CloudOps Hub:
+
 A containerized task-management application built to demonstrate practical Cloud and DevOps workflows, including Docker, Docker Compose, Kubernetes, PostgreSQL, automated testing, and CI/CD.
 
-Architecture
+Architecture:
+
 <img width="998" height="1722" alt="mermaid-diagram" src="https://github.com/user-attachments/assets/0fd37fb9-c79d-46d5-86dc-4937321e67fc" />
 
-PostgreSQL Database
-Technology Stack
+PostgreSQL Database:
+
+Technology Stack:
+
 - Frontend: React, Vite, Nginx
 - Backend: Python, Flask
 - Database: PostgreSQL
@@ -15,7 +19,9 @@ Technology Stack
 - CI/CD: GitHub Actions
 - Testing: pytest
 - Kubernetes manifest validation: Kubeconform
-Features
+
+Features:
+
 - Task management through REST API endpoints
 - PostgreSQL database integration
 - Containerized frontend and backend
@@ -24,7 +30,8 @@ Features
 - Persistent database storage
 - Application health checks
 - Automated testing and CI/CD workflow
-Prerequisites
+
+Prerequisites:
 For the local Docker Compose setup:
 - Git
 - Docker Engine
